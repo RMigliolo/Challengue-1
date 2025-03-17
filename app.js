@@ -8,7 +8,7 @@ function agregarAmigo() {
     let inputAmigo = document.getElementById('amigo');
     let nombreAmigo = inputAmigo.value;
     
-    if (inputAmigo == nombreAmigo) {
+    if (inputAmigo === nombreAmigo) {
      alert('Ingrese un nombre');
      return;
     }
@@ -19,7 +19,15 @@ function agregarAmigo() {
     console.log(amigos);
 }
 
-
+function listadoAmigos() {
+    let listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = '';
+    for (let i = 0; i < amigos.length; i++) {
+        let item = document.createElement('li');
+        item.textContent = amigo [i];
+        listaAmigos.appendChild(item);
+    }
+}
 
 
 
