@@ -12,8 +12,8 @@ function agregarAmigo() {
      alert('Ingrese un nombre');
      return; //Detiene ejecución de la función
     }
-
-    if(amigos.includes(nombreAmigo) {
+    //Validación de nombre repetido
+    if(amigos.includes(nombreAmigo)) {
         alert('El nombre del amigo ya fue ingresado');
         return;
     }
@@ -36,7 +36,7 @@ function listadoAmigos() {
 }
 //Función sorteo de amigo
 function sortearAmigo(){
-    if(amigos.length === 0){
+    if(amigos.length === 0){ //Validación del array esta vacío
         alert('No hay amigos para sortear');
         return;
     }
